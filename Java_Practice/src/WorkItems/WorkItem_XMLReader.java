@@ -17,6 +17,13 @@ public class WorkItem_XMLReader {
 // 1. Destination of the XML File is assigned to fXMLFile object reference. 
 		    File fXmlFile = new File("\\Users\\Training\\Desktop\\WorkItem_XMLReader\\WorkItem_XMLReader.xml");
 		    
+		    if(fXmlFile.length()==0)
+		    {
+		    	System.out.println("Empty File--XML content not available");
+		    }
+		    
+		    else
+		    {
 // 2. DocumentBuilderFactory.newInstance() is a static method creates a new instance of a DocumentBuilder Factory.	
 // 2a. The new instance of the document builder factory is assigned to dbFactory object reference.
 // 2b. Document Builder defines the API to obtain DOM Document instances from an XML document
@@ -74,12 +81,12 @@ public class WorkItem_XMLReader {
 		                                 .item(0).getTextContent());
 		        }
 		    }
-		    } catch (Exception e) {
+		    } 
+		    }
+		    catch (Exception e) {
 		    e.printStackTrace();
 		    }
 		  }
 		
 		
 	}
-
-
